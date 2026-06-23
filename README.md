@@ -1,4 +1,4 @@
-# Valve Server Manager (VSM) 🎮
+# Valve Server Manager (VSM)
 
 A lightweight, cross-platform terminal user interface (TUI) utility written in Rust that allows players to block and unblock Valve's Steam Datagram Relay (SDR) server regions. 
 
@@ -6,7 +6,7 @@ By manipulating the operating system's firewall, VSM forces matchmaking systems 
 
 ---
 
-## ✨ Features
+## Features
 
 *   **Cross-Platform Integration**:
     *   **Linux**: Automatically creates and manages a dedicated `VSM_BLOCKS` chain in `iptables` to keep your primary rules clean.
@@ -19,7 +19,7 @@ By manipulating the operating system's firewall, VSM forces matchmaking systems 
 
 ---
 
-## ⌨️ Controls
+## Controls
 
 | Key | Action |
 | :---: | :--- |
@@ -31,7 +31,7 @@ By manipulating the operating system's firewall, VSM forces matchmaking systems 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 *   [Rust and Cargo](https://rustup.rs/) (edition 2021+)
@@ -61,7 +61,7 @@ sudo ./target/release/valve-server-manager
 
 ---
 
-## 🛠️ Architecture
+## Architecture
 
 The codebase is structured into isolated, testable modules:
 *   `src/main.rs`: Entrypoint, privilege validation, and alternate screen bootstrap.
@@ -74,7 +74,7 @@ The codebase is structured into isolated, testable modules:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Running unit tests:
 ```bash
