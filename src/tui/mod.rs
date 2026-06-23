@@ -18,6 +18,7 @@ pub struct AppState {
     pub pops: HashMap<String, PoP>,
     pub selectable_pops: Vec<(String, &'static str)>, // (pop_code, region_name)
     pub selected_index: usize,
+    pub list_state: ratatui::widgets::ListState,
     
     pub firewall: Box<dyn FirewallDriver>,
     pub config_manager: ConfigManager,
@@ -81,10 +82,14 @@ impl AppState {
 
         let persist_rules_on_exit_flag = std::sync::Arc::new(std::sync::atomic::AtomicBool::new(settings.persist_rules_on_exit));
 
+        let mut list_state = ratatui::widgets::ListState::default();
+        list_state.select(Some(0));
+
         Ok(Self {
             pops,
             selectable_pops,
             selected_index: 0,
+            list_state,
             firewall,
             config_manager,
             settings,
@@ -125,10 +130,14 @@ impl AppState {
         let blocked_pops = settings.blocked_pops.iter().cloned().collect();
         let persist_rules_on_exit_flag = std::sync::Arc::new(std::sync::atomic::AtomicBool::new(settings.persist_rules_on_exit));
 
+        let mut list_state = ratatui::widgets::ListState::default();
+        list_state.select(Some(0));
+
         Self {
             pops,
             selectable_pops,
             selected_index: 0,
+            list_state,
             firewall,
             config_manager,
             settings,

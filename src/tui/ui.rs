@@ -97,7 +97,12 @@ pub fn draw_ui(f: &mut Frame, state: &mut AppState) {
 
     let list = List::new(list_items)
         .block(Block::default().title(" Relay Regions (Use ↑/↓, Space to Toggle) ").borders(Borders::ALL));
-    f.render_widget(list, main_chunks[0]);
+    if state.selectable_pops.is_empty() {
+        state.list_state.select(None);
+    } else {
+        state.list_state.select(Some(state.selected_index));
+    }
+    f.render_stateful_widget(list, main_chunks[0], &mut state.list_state);
 
     // Render Right Panel (Details)
     if !state.selectable_pops.is_empty() {
