@@ -1,4 +1,7 @@
+#[cfg(any(unix, test))]
 pub mod linux;
+
+#[cfg(any(windows, test))]
 pub mod windows;
 
 use std::collections::HashSet;

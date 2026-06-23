@@ -1,14 +1,14 @@
 use std::collections::HashSet;
-use super::{FirewallDriver, CommandExecutor, SystemCommandExecutor};
+use super::{FirewallDriver, CommandExecutor};
 
-#[allow(dead_code)]
 pub struct LinuxFirewall {
     executor: Box<dyn CommandExecutor>,
 }
 
-#[allow(dead_code)]
 impl LinuxFirewall {
+    #[cfg(not(test))]
     pub fn new() -> Self {
+        use super::SystemCommandExecutor;
         Self::with_executor(Box::new(SystemCommandExecutor))
     }
 

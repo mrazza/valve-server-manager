@@ -40,6 +40,7 @@ impl ConfigManager {
         }
     }
 
+    #[cfg(test)]
     pub fn with_path(config_file: PathBuf) -> Self {
         let config_dir = config_file.parent().unwrap_or(&config_file).to_path_buf();
         Self {

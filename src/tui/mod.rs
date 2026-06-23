@@ -96,6 +96,7 @@ impl AppState {
         })
     }
 
+    #[cfg(test)]
     pub fn with_components(
         pops: HashMap<String, PoP>,
         firewall: Box<dyn FirewallDriver>,
