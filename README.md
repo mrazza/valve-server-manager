@@ -4,6 +4,8 @@ A lightweight, cross-platform terminal user interface (TUI) utility written in R
 
 By manipulating the operating system's firewall, VSM forces matchmaking systems in games like **Counter-Strike 2** and **Deadlock** to select the specific global regions you prefer, avoiding high latency or undesirable routing.
 
+![Valve Server Manager Screenshot](vsm.png)
+
 ---
 
 ## Features
