@@ -35,11 +35,25 @@ By manipulating the operating system's firewall, VSM forces matchmaking systems 
 
 ## Getting Started
 
-### Prerequisites
+### Installation & Download
+
+There are three ways to get Valve Server Manager:
+
+1. **Windows**: Download the Windows binary from the [latest release (v0.1.1)](https://github.com/mrazza/valve-server-manager/releases/tag/v0.1.1).
+2. **Linux**: Download the Linux binary from the [latest release (v0.1.1)](https://github.com/mrazza/valve-server-manager/releases/tag/v0.1.1).
+3. **Gentoo**: If using Gentoo Linux, you can use the [razza-overlay](https://github.com/mrazza/razza-overlay) Portage overlay to build it from source.
+
+---
+
+### Building from Source Manually
+
+If you prefer to compile the application yourself, follow these steps.
+
+#### Prerequisites
 *   [Rust and Cargo](https://rustup.rs/) (edition 2021+)
 *   Administrative privileges on your system (required to edit firewall rules)
 
-### Installation & Compilation
+#### Compilation
 Clone the repository and compile the release binary:
 ```bash
 git clone https://github.com/mrazza/valve-server-manager.git
